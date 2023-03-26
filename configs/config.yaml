@@ -1,0 +1,50 @@
+Server:
+  RunMode: debug
+  HttpPort: 80
+  ReadTimeout: 60
+  WriteTimeout: 60
+
+App:
+  AppName: tool-ai
+  DefaultPageSize: 10
+  MaxPageSize: 100
+  LogSavePath: storage/logs
+  LogFileName: app
+  LogFileExt: .log
+
+Database:
+  DBType: mysql
+  Username: root
+  Password: root
+  Host: 127.0.0.1:3306
+  DBName: tool-ai
+  TablePrefix: ai
+  Charset: utf8
+  ParseTime: True
+  MaxIdleConns: 10
+  MaxOpenConns: 30
+
+JWT:
+  Secret: qjdlcpe
+  Issuer: tool-ai
+  Expire: 7200
+
+Miniprogram:
+  AppID: wxbfb9b5f8582caaae
+  Secret: fa3adc4a382fbd752bca6e4af5be3691
+  RedisAddr:
+  MessageToken:
+  MessageAesKey:
+
+OpenAI:
+  #BaseURL:在外网服务器搭建的http转发
+  BaseURL: "https://openai-proxy.ai-love.cn/v1"
+  AuthToken: "openai的 authtoken"
+  EnableProxy: false
+  ProxyUrl: http://127.0.0.1:7890
+  MaxTokens: 2048
+
+Chat:
+  MaxReq: 5
+
+
